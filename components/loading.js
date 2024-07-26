@@ -1,22 +1,20 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
+import Number from "./number";
+import Colon from "./colon";
 
 const Loading = () => {
     return (
         <>
             <View style={styles.container}>
                 <View style={styles.timerContainer}>
-                    <View>
-                        <Text style={styles.top}>
-                            31
-                        </Text>
-                        <Text>
-                            Hours
-                        </Text>
-                    </View>
-                    <Text style={styles.color}>
-                        :
-                    </Text>
+                    <Number time={31} label={"DAYS"}/>
+                    <Colon />
+                    <Number time={31} label={"HOURS"}/>
+                    <Colon />
+                    <Number time={31} label={"MINUTES"}/>
+                    <Colon />
+                    <Number time={31} label={"SECONDS"}/>
                 </View>
             </View> 
         </>
@@ -24,23 +22,16 @@ const Loading = () => {
 }
 
 const styles = StyleSheet.create({
-    colon: {
-        height: 70,
-        
-    },
-    top: {
-        height: 70,
-    },
     timerContainer: {
         width: "75%",
         height: 140,
         borderRadius: 25,
         backgroundColor: "rgba(11, 115, 254, 255)",
-        justifyContent: "flex-start",
-        alignItems: "center",
+        justifyContent: "center",
+        alignItems: "flex-start",
         flexDirection: "row",
         columnGap: 15,
-        paddingTop: 50,
+        paddingTop: 30
     },
     container: {
         width: "100%",
