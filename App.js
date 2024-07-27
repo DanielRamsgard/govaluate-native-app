@@ -1,10 +1,10 @@
 import React from 'react';
-import Loading from './components/loading';
+import PDFStylus from './components/pdfStylus';
 
 function App() {
     return (
         <>
-            <Loading />
+            <PDFStylus />
         </>
     );
 }

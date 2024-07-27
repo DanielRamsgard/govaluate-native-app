@@ -18,7 +18,7 @@ const Navigation = () => {
                         <Text style={styles.name}>
                             Welcome, Daniel Ramsgard
                         </Text>
-                        <LogoFill />
+                        <LogoFill width={25} height={25}/>
                     </View>
                     <View style={styles.bottom}>
                         <View style={{ width: "30.5%", flexDirection: "row", alignItems: "center" }}>
