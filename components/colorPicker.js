@@ -8,6 +8,7 @@ const Picker = (props) => {
             <View>
                 <ColorPicker
                     onColorChangeComplete={props.updateColor}
+                    onColorChange={props.updateColor}
                     thumbSize={10}
                     sliderSize={10}
                     noSnap={true}

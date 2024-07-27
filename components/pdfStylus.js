@@ -13,6 +13,7 @@ import Picker from "./colorPicker";
 const PDFStylus = () => {
     const colorGlobal = "rgba(11, 115, 254, 255)";
     const [stylusWidth, setStylusWidth] = useState(0);
+    const [stylusEraser, setStylusEraser] = useState(0);
     const [color, setColor] = useState("#000000");
     const [picker, setPicker] = useState(false);
     const windowWidth = Dimensions.get('window').width;
@@ -51,14 +52,14 @@ const PDFStylus = () => {
                         </View>
                     </View>
                     <View style={styles.zoomContainer}>  
+                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusEraser === 0 ? "rgb(220,220,220)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusEraser(0)}}>
+                            <Stylus width={12} height={12} color={colorGlobal}/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusEraser === 1 ? "rgb(220,220,220)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusEraser(1)}}>
+                            <Eraser width={13} height={13} color={colorGlobal}/>
+                        </TouchableOpacity>
                         <View style={styles.container}>
-                            <Stylus width={14} height={14} color={colorGlobal}/>
-                        </View>
-                        <View style={styles.container}>
-                            <Eraser width={15} height={15} color={colorGlobal}/>
-                        </View>
-                        <View style={styles.container}>
-                            <TouchableOpacity style={[styles.circle, { backgroundColor: color }]} onPress={() => {setPicker(true)}}>
+                            <TouchableOpacity style={[styles.circle, { backgroundColor: color }]} onPress={() => {setPicker(true)}} activeOpacity={1}>
                                 <Chevron />
                             </TouchableOpacity>
                         </View>
@@ -74,17 +75,17 @@ const PDFStylus = () => {
                         </View>
                     </View>
                     <View style={styles.zoomContainer}> 
-                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusWidth === 0 ? "rgb(240,240,240)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusWidth(0)}}>
+                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusWidth === 0 ? "rgb(220,220,220)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusWidth(0)}}>
                             <View style={[styles.width, { height: 2 }]}>
                                 
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusWidth === 1 ? "rgb(240,240,240)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusWidth(1)}}>
+                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusWidth === 1 ? "rgb(220,220,220)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusWidth(1)}}>
                             <View style={[styles.width, { height: 3 }]}>
                                 
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusWidth === 2 ? "rgb(230,230,230)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusWidth(2)}}>
+                        <TouchableOpacity style={[styles.container, { backgroundColor: stylusWidth === 2 ? "rgb(220,220,220)" : "transparent" }]} activeOpacity={1} onPress={() => {setStylusWidth(2)}}>
                             <View style={[styles.width, { height: 4 }]}>
                                 
                             </View>
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
     width: {
         width: "80%",
         borderRadius: 10,
-        backgroundColor: "rgb(210,210,210)",
+        backgroundColor: "rgb(150,150,150)",
     },
     circle: {
         justifyContent: "center",
