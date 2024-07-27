@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import LogoFill from "./logoFill";
 import Eraser from "./eraser";
 import Stylus from "./stylus";
+import Chevron from "./chevron";
 
 const PDFStylus = () => {
     return (
@@ -22,12 +23,12 @@ const PDFStylus = () => {
                         <Eraser width={15} height={15}/>
                     </View>
                     <View style={styles.container}>
-                        <View style={styles}>
-
+                        <View style={[styles.circle, { backgroundColor: "red" }]}>
+                            <Chevron />
                         </View>
                     </View>
                     <View style={styles.container}>
-                        <View>
+                        <View style={[styles.circle, { backgroundColor: "black" }]}>
                             
                         </View>
                     </View>
@@ -38,6 +39,13 @@ const PDFStylus = () => {
 }
 
 const styles = StyleSheet.create({
+    circle: {
+        justifyContent: "center",
+        alignItems: "center",
+        width: 10,
+        height: 10,
+        borderRadius: 10,
+    },
     container: {
         width: 20,
         height: 20,
