@@ -96,7 +96,7 @@ const PDFStylus = () => {
 
                     ?
 
-                    <TouchableOpacity style={{ width: "100%", height: "100%", backgroundColor: "#282828", justifyContent: "flex-start", alignItems: "center", paddingTop: 20 }} onPress={() => {setPicker(false)}} color={color}>
+                    <TouchableOpacity style={{ width: "100%", height: "100%", backgroundColor: "#282828", justifyContent: "flex-start", alignItems: "center", paddingTop: 20 }} onPress={() => {setPicker(false)}}>
                         <Picker updateColor={updateColor} color={color}/>
                     </TouchableOpacity>
 

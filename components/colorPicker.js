@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Text, ActivityIndicator, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import ColorPicker from 'react-native-wheel-color-picker';
 
 const Picker = (props) => {
-
     return (
         <View style={styles.container}>
             <View>
@@ -19,6 +18,7 @@ const Picker = (props) => {
                     useNativeLayout={true}
                     swatches={true}
                     color={props.color}
+                    autoResetSlider={true}
                     palette={['#000000', '#ed1c24', '#d11cd5', '#1633e6', '#00aeef', '#57ff0a', '#ffde17', '#f26522']}
                 />
             </View>
