@@ -6,7 +6,7 @@ const Stylus = (props) => (
         xmlns="http://www.w3.org/2000/svg"
         width={props.width}
         height={props.height}
-        fill="currentColor"
+        fill={props.color}
         viewBox="0 0 16 16"
         {...props}
     >
