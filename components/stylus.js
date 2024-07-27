@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Svg, { Path } from "react-native-svg";
 
 const Stylus = (props) => (
@@ -7,7 +7,6 @@ const Stylus = (props) => (
         width={props.width}
         height={props.height}
         fill="currentColor"
-        className="bi bi-pen-fill"
         viewBox="0 0 16 16"
         {...props}
     >
