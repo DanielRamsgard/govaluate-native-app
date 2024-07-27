@@ -52,7 +52,7 @@ const PDFStylus = () => {
                     </View>
                     <View style={styles.zoomContainer}>  
                         <View style={styles.container}>
-                            <Stylus width={14} height={14} color={color}/>
+                            <Stylus width={14} height={14} color={colorGlobal}/>
                         </View>
                         <View style={styles.container}>
                             <Eraser width={15} height={15} color={colorGlobal}/>
@@ -96,7 +96,7 @@ const PDFStylus = () => {
 
                     ?
 
-                    <TouchableOpacity style={{ width: "100%", height: "100%", backgroundColor: "#282828", justifyContent: "flex-start", alignItems: "center", paddingTop: 20 }} onPress={() => {setPicker(false)}}>
+                    <TouchableOpacity style={{ width: "100%", height: "100%", backgroundColor: "#282828", justifyContent: "flex-start", alignItems: "center", paddingTop: 20 }} onPress={() => {setPicker(false)}} color={color}>
                         <Picker updateColor={updateColor} color={color}/>
                     </TouchableOpacity>
 
